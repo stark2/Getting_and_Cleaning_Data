@@ -76,5 +76,5 @@ melt_data <- melt(data, id = id_labels, measure.vars = data_labels)
 tidy_data <- dcast(melt_data, Subject_ID + Activity_Name ~ variable, mean)
 
 # write tidy dataset to a file
-write.table(tidy_data, file = "./tidy_data.txt")
+write.table(tidy_data, file = "./tidy_data.txt", row.names = FALSE)
 
